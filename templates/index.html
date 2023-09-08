@@ -1,0 +1,118 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Header Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    form {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #555;
+    }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      border: 2px solid;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    .recommended-header {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Header Checker</h1>
+  </header>
+  <div class="container">
+    <form method="POST">
+      <label for="url">Enter URL:</label>
+      <input type="text" name="url" required>
+      <br>
+      <button type="submit">Check Headers</button>
+    </form>
+    {% if url %}
+    <h2>URL: {{ url }}</h2>
+    {% if headers %}
+    <h3>Headers:</h3>
+    <ul>
+      {% for key, value in headers.items() %}
+      <li><strong>{{ key }}:</strong> {{ value }}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No headers found for this URL.</p>
+    {% endif %}
+    <h3>Recommended Headers to Add:</h3>
+    <ul>
+      {% for header in recommended_headers %}
+      <li class="{% if header in headers %}recommended-header{% endif %}">{{ header }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</body>
+
+</html>
