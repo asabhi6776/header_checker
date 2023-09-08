@@ -1,4 +1,4 @@
-version: '3.4'
+version: "3.4"
 
 services:
   flaskheader:
@@ -7,4 +7,4 @@ services:
       context: .
       dockerfile: ./Dockerfile
     ports:
-      - 5002:5002
+      - 5000:5002

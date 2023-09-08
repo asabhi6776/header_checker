@@ -18,7 +18,7 @@ The Header Checker is a simple web application built with Python and Flask that 
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/header-checker-webapp.git
+   git clone https://github.com/asabhi6776/header_checker.git
    ```
 
    Navigate to the project directory:
@@ -44,7 +44,7 @@ The Header Checker is a simple web application built with Python and Flask that 
 2. Clone this repository to your local machine:
 
     ```bash
-    git clone https://github.com/yourusername/header-checker-webapp.git
+    git clone https://github.com/asabhi6776/header_checker.git
     ```
 
    Navigate to the project directory:
