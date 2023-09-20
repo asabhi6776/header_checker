@@ -59,7 +59,7 @@ The Header Checker is a simple web application built with Python and Flask that 
     docker-compose up -d
     ```
 
-Open your web browser and visit <http://localhost:5000> to access the Header Checker application.
+Open your web browser and visit <http://localhost:5002> to access the Header Checker application.
 
 Enter a URL in the input box and click the "Check Headers" button.
 
